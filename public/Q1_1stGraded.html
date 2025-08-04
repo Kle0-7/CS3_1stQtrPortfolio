@@ -1,4 +1,17 @@
 <script>
-  document.write("Hello World by Mendoza");
+  document.write("HEY HEY HEY by Foronda");
+ 
+  
+
+  document.body.style.backgroundColor = "darkolivegreen";
+  function toggleColor() {
+  const currentColor = document.body.style.backgroundColor;
+  document.body.style.backgroundColor = currentColor === "darkolivegreen" ? "black" : "darkolivegreen";
+}
+
+// Call the function on a button click
+document.getElementById("colorToggleBtn").addEventListener("click", toggleColor);
+
   
 </script>
+  
