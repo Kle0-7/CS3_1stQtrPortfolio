@@ -8,15 +8,20 @@
         var numPerDay = 1;
         var totalRequired = (numPerDay*365) * (maxAge-age);
 
-        document.write("You will need "+totalRequired ,"to last you until the ripe old age of "+maxAge, ".");
+        document.write("You will need " +totalRequired ," books to last you until the ripe old age of "+maxAge, ".");
+
+          document.body.style.backgroundColor = "darkolivegreen";
+  function toggleColor() {
+  const currentColor = document.body.style.backgroundColor;
+  document.body.style.backgroundColor = currentColor === "darkolivegreen" ? "black" : "darkolivegreen";
+}
 
 
 
+// Call the function on a button click
+document.getElementById("colorToggleBtn").addEventListener("click", toggleColor);
 
 
     </script>
-
-
-
 </body>
 </html>
