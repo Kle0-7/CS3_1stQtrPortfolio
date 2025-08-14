@@ -16,7 +16,7 @@
         const myTip = Number(document.getElementById("tip".value));
         const serviceCharge = Number(service_charge.value);
 
-        total = (mealPrice + myTip) + (mealPrice * serviceCharge / 100);
+        total = (mealPrice + myTip) + ( serviceCharge / 100 * mealPrice );
 
         totalOutput.innerHTML = "Total Amount : Php" + total.toFixed(2);
         alert("Total Amount : Php" + total.toFixed(2));
