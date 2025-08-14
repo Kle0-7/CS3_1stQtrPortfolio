@@ -1,9 +1,15 @@
-<h1>Kleo Foronda - 9  Strontium - Aug 11, 2025</h1>
-<h2>3rd Graded Exercise<h2>
+<!DOCTYPE html>
+<html>
+<body>
 
-<input id = "mealprice" type = "number" placeholder = "Meal Price "><br>
-<input id = "tip" type = "number" placeholder = "Tip "><br>
-<input id = "service_charge" type = "number" placeholder = "Service Charge "><br>
+<h1>Kleo Foronda - 9  Strontium - Aug 11, 2025</h1>
+<h2>3rd Graded Exercise</h2>
+
+
+
+Meal Price:<input id = "mealprice" type = "number" placeholder = "Meal Price "><br>
+Tip<input id = "tip" type = "number" placeholder = "Tip "><br>
+Service Charge<input id = "service_charge" type = "number" placeholder = "Service Charge "><br>
 
 
 <button onclick = "calculateTotal()"> Calculate Total</button>
@@ -16,11 +22,11 @@
         const myTip = Number(document.getElementById("tip".value));
         const serviceCharge = Number(service_charge.value);
 
-        total = (mealPrice + myTip) + ( serviceCharge / 100 * mealPrice );
+        total = mealPrice + myTip + ( (serviceCharge / 100) * mealPrice );
 
-        totalOutput.innerHTML = "Total Amount : Php" + total.toFixed(2);
-        alert("Total Amount : Php" + total.toFixed(2));
-        console.log("Total Amount : Php" + total.toExponential());
+        totalOutput.innerHTML = "Accept Input : Php" + total.toFixed(2);
+        alert("Accept Input : Php" + total.toFixed(2));
+        console.log("Accept Input : Php" + total.toExponential());
 
 
     }
@@ -44,3 +50,5 @@
     
   </script>
     
+</body>
+</html>
