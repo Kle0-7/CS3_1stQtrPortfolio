@@ -2,8 +2,7 @@
 <html>
 <body>
 
-<h1>Kleo Foronda - 9  Strontium - Aug 11, 2025</h1>
-<h2>3rd Graded Exercise</h2>
+<h2>Kleo Foronda - 9  Strontium 2nd Graded Exercise</h2>
 
 
 
@@ -20,13 +19,12 @@ Service Charge<input id = "service_charge" type = "number" placeholder = "Servic
     function calculateTotal() {
         const mealPrice = Number(mealprice.value)
         const myTip = Number(document.getElementById("tip".value));
-        const serviceCharge = Number(service_charge.value);
+        const serviceCharge = (service_charge.value);
 
-        total = mealPrice + myTip + ( serviceCharge / 100 * mealPrice );
+        total = (mealPrice + myTip +  (serviceCharge/100 * mealPrice ));
 
         totalOutput.innerHTML = "Accept Input : Php" + total.toFixed(2);
-        alert("Accept Input : Php" + total.toFixed(2));
-        console.log("Accept Input : Php" + total.toExponential());
+        
 
 
     }
