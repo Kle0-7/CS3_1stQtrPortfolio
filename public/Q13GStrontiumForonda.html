@@ -2,30 +2,36 @@
 <html>
 <body>
 
-<h2>Kleo Foronda - 9  Strontium 3rd Graded Exercise</h2>
+   <h2> Q1 3rd Graded Exercise submitted by Kleo Foronda of 9-Strontium</h2>
+   
+   <p>Guess the number: ***</p>
+   <p>The number is from 1 to 100</p>
 
-Meal Price:<input id = "mealprice" type = "number" placeholder = "Meal Price "><br>
-Tip<input id = "tip" type = "number" placeholder = "Tip "><br>
-Service Charge<input id = "service_charge" type = "number" placeholder = "Service Charge "><br>
+   Enter your guess:<input id = "guessnumber" type = "Number" placeholder="Your guess "></br>
 
-
-<button onclick = "calculateTotal()"> Calculate Total</button>
-
-<div id = "totalOutput"></div>
-
-<script>
-    function calculateTotal() {
-        var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
-
+   <br><button onclick = "checkIt()"> Check It</button></br>
+   <br>Result: <div id ="checker"></div>
+   
+   <script>
+        
+        var dNumber = Math.floor(Math.random() * 100) + 1;
+         
         function checkIt() {
+           let guessNumber = Number(guessnumber.value);
+           
+           if (guessNumber > dNumber) {
+                checker.innerHTML = "Lower !!" ;     
+            } 
+            else if (guessNumber < dNumber) {
+               checker.innerHTML = "Higher !!";
+            } 
+            else{
+               checker.innerHTML = "You guessed correctly !!";
+            }
             
-
-    }
-
-</script>
-<script>
-    
-    
+        }
+    </script>
+    <script>
   
     document.body.style.backgroundColor = "darkolivegreen";
     function toggleColor() {
@@ -33,13 +39,13 @@ Service Charge<input id = "service_charge" type = "number" placeholder = "Servic
     document.body.style.backgroundColor = currentColor === "darkolivegreen" ? "black" : "darkolivegreen";
   }
   
-  
-  
   // Call the function on a button click
   document.getElementById("colorToggleBtn").addEventListener("click", toggleColor);
   
     
   </script>
-    
+
+
 </body>
+
 </html>
